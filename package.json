@@ -1,0 +1,31 @@
+{
+  "name": "todolistapi",
+  "version": "1.0.0",
+  "description": "RESTful todoListAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewjknapp/todoListAPI.git"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "ToDo"
+  ],
+  "author": "Andrew Knapp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewjknapp/todoListAPI/issues"
+  },
+  "homepage": "https://github.com/andrewjknapp/todoListAPI#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0"
+  }
+}
