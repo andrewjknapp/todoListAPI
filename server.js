@@ -6,13 +6,18 @@ const express = require('express'),
       bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongod://localhost/Tododb');
+mongoose.connect("mongodb://localhost:27017/TodoDB", { useNewUrlParser: true , useUnifiedTopology: true});
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const routes = require('./api/routes/todoListRoutes');
 routes(app);
+
+app.use(function(req, res) {
+    res.status(404).send({url: req.originalUrl + ' not found'})
+});
 
 app.listen(port);
 
